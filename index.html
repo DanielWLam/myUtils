@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+	<input type="text" id="test">
+  <script src="index.js"></script>
+  <script>
+  	let $el = document.getElementById('test');
+  	// $el.oninput = function(e) {
+  	// 	setTimeout(function() {
+			// 	console.log(e.target.value)
+  	// 	}, 500)
+  	// }
+
+		$el.oninput = utils.throttle(function () {
+					console.log(123)
+				}, 2000, {leading: false})
+		
+  	// console.log(utils.queryStringify({
+  	// 	a: 1,
+  	// 	b: 2
+  	// }))
+  </script>
+</body>
+</html>
