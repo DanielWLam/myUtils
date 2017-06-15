@@ -46,6 +46,17 @@ const utils = {
         fn.call(this, arguments)
       }, delay)
     }
+  },
+  isJSON: function (str) {
+    try {
+      let o = JSON.parse(str);
+      if (o && typeof o === 'object') { // 考虑null的情况
+        return o
+      }
+    } catch(e) {
+      
+    }
+    return false;
   }
 };
 
