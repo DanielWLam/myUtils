@@ -57,6 +57,19 @@ const utils = {
       
     }
     return false;
+  },
+  // 数组乱序
+  shuffle: function (array) {
+    let _arr = array.concat(); // 形成副本
+    for (let i = 0; i < _arr.length; i++) {
+      let j = Math.floor(Math.random() * i)
+      // if (j !== i) {
+        let tmp = _arr[i]
+        _arr[i] = _arr[j]
+        _arr[j] = tmp
+      // }
+    }
+    return _arr;
   }
 };
 
